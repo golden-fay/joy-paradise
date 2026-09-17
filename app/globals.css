@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-950: #040c1c;
+  --color-navy-900: #071b3a;
+  --color-navy-800: #0e2a52;
+  --color-navy-700: #15396a;
+  --color-navy-600: #1c4880;
+  --color-navy-500: #2c5a95;
+
+  --color-blue-700: #0d4bb0;
+  --color-blue-600: #1158c2;
+  --color-blue-500: #1464d2;
+  --color-blue-400: #3f82e0;
+  --color-blue-300: #7dabe9;
+  --color-blue-100: #d9e8fb;
+  --color-blue-50: #eef4fd;
+
+  --color-cream-50: #f5f9ff;
+  --color-cream-100: #e9f1fd;
+  --color-cream-200: #d8e8fb;
+
+  --color-gold-300: #f8dfa0;
+  --color-gold-400: #f7cb6e;
+  --color-gold-500: #f4b942;
+  --color-gold-600: #d99a1f;
+
+  --color-terracotta-400: #e2977a;
+  --color-terracotta-500: #d67c5c;
+  --color-terracotta-600: #b96246;
+
+  --color-ink: #172033;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-display: var(--font-playfair);
+}
+
+:root {
+  --background: var(--color-cream-50);
+  --foreground: var(--color-ink);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Keeps anchor-linked sections clear of the sticky header on scroll */
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+::selection {
+  background: var(--color-gold-300);
+  color: var(--color-navy-950);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-blue-500);
+  outline-offset: 2px;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out both;
+}
+
+@keyframes modal-overlay-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-modal-overlay-in {
+  animation: modal-overlay-in 0.2s ease-out both;
+}
+
+.animate-modal-panel-in {
+  animation: modal-panel-in 0.25s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
