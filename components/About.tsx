@@ -1,7 +1,6 @@
 import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
 import { CompassIcon, HandHeartIcon, PlayfulStarIcon, UsersIcon } from "@/components/icons";
-import { ConnectionIllustration } from "@/components/illustrations";
 
 const PILLARS = [
   {
@@ -28,8 +27,13 @@ const PILLARS = [
 
 export function About() {
   return (
-    <section id="about" className="bg-white py-20 sm:py-28">
-      <Container className="grid gap-14 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
+    <section id="about" className="relative overflow-hidden bg-white py-20 sm:py-28">
+      <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -right-24 -top-24 size-80 rounded-full bg-blue-50/90 sm:size-[28rem]" />
+        <div className="absolute -left-32 bottom-[-10rem] size-[30rem] rounded-full border-[54px] border-blue-100/70" />
+        <div className="absolute right-[8%] top-[14%] h-40 w-40 rounded-full border-[22px] border-blue-300/20" />
+      </div>
+      <Container className="relative z-10 grid gap-14 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
         <div className="flex flex-col gap-6">
           <SectionHeading
             eyebrow="About Joy Paradise"
@@ -52,11 +56,10 @@ export function About() {
 
         <div className="flex flex-col gap-6">
           <div className="overflow-hidden rounded-2xl shadow-sm">
-            <ConnectionIllustration
-              role="img"
-              aria-label="Two people connecting warmly, representing companionship and support"
-              className="h-56 w-full sm:h-64"
-              preserveAspectRatio="xMidYMid slice"
+            <img
+              src="/images/about-joys-paradise.jpg"
+              alt="Support worker sharing a warm conversation with an older woman"
+              className="h-56 w-full object-cover sm:h-64"
             />
           </div>
 

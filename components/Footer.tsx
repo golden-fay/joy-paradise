@@ -21,8 +21,14 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-navy-950 text-cream-100/80">
-      <Container className="grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-4">
+    <footer className="relative overflow-hidden bg-navy-950 text-cream-100/80">
+      <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(135deg,#041B36,#072D5A_58%,#041B36)]" />
+        <div className="absolute -right-28 -top-36 size-[28rem] rounded-full border-[54px] border-blue-300/10" />
+        <div className="absolute -left-24 bottom-[-14rem] size-[30rem] rounded-full border-[58px] border-blue-100/10" />
+        <div className="absolute bottom-[18%] left-[34%] h-24 w-80 rounded-[50%] border-y-[18px] border-blue-300/10 rotate-[-8deg]" />
+      </div>
+      <Container className="relative z-10 grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-4">
         <div className="flex flex-col gap-3">
           <span className="font-display text-xl font-semibold text-cream-50">
             Joy Paradise

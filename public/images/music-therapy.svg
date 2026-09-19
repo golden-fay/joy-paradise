@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">Music therapy and creative engagement</title>
+  <desc id="desc">A warm illustration of people enjoying music together with instruments and creative materials.</desc>
+  <rect width="1200" height="750" fill="#E8F3F6"/>
+  <circle cx="180" cy="145" r="150" fill="#A1CEDC" opacity=".5"/>
+  <circle cx="1030" cy="620" r="190" fill="#072D5A" opacity=".08"/>
+  <path d="M0 610c180-110 360-110 540 0s360 110 660 0v140H0Z" fill="#A1CEDC" opacity=".45"/>
+  <path d="M170 240c70-70 140-70 210 0M220 190c70-70 140-70 210 0M270 140c70-70 140-70 210 0" fill="none" stroke="#287496" stroke-width="12" stroke-linecap="round" opacity=".65"/>
+  <circle cx="495" cy="285" r="48" fill="#D2E8ED"/>
+  <path d="M420 500c0-91 34-145 75-145s75 54 75 145Z" fill="#072D5A"/>
+  <path d="M432 238c28-35 81-30 98 6-29-12-59-15-98-6Z" fill="#124578"/>
+  <circle cx="478" cy="285" r="5" fill="#072D5A"/><circle cx="510" cy="285" r="5" fill="#072D5A"/>
+  <path d="M477 308c12 8 24 8 36 0" fill="none" stroke="#072D5A" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="735" cy="310" r="52" fill="#A1CEDC"/>
+  <path d="M655 530c0-105 37-165 80-165s80 60 80 165Z" fill="#287496"/>
+  <path d="M686 270c24-37 83-36 103 7-31-14-68-15-103-7Z" fill="#124578"/>
+  <circle cx="718" cy="310" r="5" fill="#072D5A"/><circle cx="752" cy="310" r="5" fill="#072D5A"/>
+  <path d="M717 335c12 8 25 8 37 0" fill="none" stroke="#072D5A" stroke-width="5" stroke-linecap="round"/>
+  <path d="M340 475c20-105 30-152 45-220" fill="none" stroke="#072D5A" stroke-width="16" stroke-linecap="round"/>
+  <path d="M372 250c82-12 125 32 96 86-35 64-119 38-96-86Z" fill="#A1CEDC" stroke="#072D5A" stroke-width="12"/>
+  <path d="M390 275c30 20 58 35 88 44" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+  <path d="M390 310c30 20 58 35 88 44" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+  <path d="M930 190v165M930 190h105" stroke="#287496" stroke-width="14" stroke-linecap="round"/>
+  <path d="M1035 190v75c-42-15-75 14-55 40 20 26 55-1 55-40" fill="#A1CEDC" stroke="#287496" stroke-width="12"/>
+</svg>
