@@ -45,12 +45,14 @@ export function Contact() {
                   <span className="text-xs font-semibold uppercase tracking-wide text-navy-800/60">
                     Phone
                   </span>
-                  <span className="text-sm text-navy-800/85">
-                    +44 XXXX XXX XXXX
-                  </span>
-                  <span className="text-xs italic text-navy-800/50">
-                    Placeholder number for design purposes only
-                  </span>
+                  <a
+                    href="https://wa.me/447440057721"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="cursor-pointer rounded-sm text-sm text-navy-800/85 underline decoration-blue-300/70 underline-offset-2 transition-colors hover:text-blue-700 hover:decoration-blue-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50"
+                  >
+                    +44 7440 057721
+                  </a>
                 </div>
               </li>
               <li className="flex items-start gap-3 rounded-xl border border-navy-900/8 bg-blue-50/70 p-4">

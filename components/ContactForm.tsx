@@ -7,8 +7,8 @@ const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 type FormErrors = Partial<Record<"name" | "email" | "supportType" | "message" | "consent", string>>;
 
 export function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<FormErrors>({});
+  const [deliveryError, setDeliveryError] = useState("");
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -32,26 +32,11 @@ export function ContactForm() {
     if (!consent) nextErrors.consent = "Please confirm that you agree to the privacy consent before sending your enquiry.";
 
     setErrors(nextErrors);
+    setDeliveryError("");
     if (Object.keys(nextErrors).length > 0) return;
 
-    // TODO: connect to a real email/CRM service before going live.
-    setSubmitted(true);
-  }
-
-  if (submitted) {
-    return (
-      <div
-        role="status"
-        className="flex flex-col items-center justify-center gap-2 rounded-2xl border border-gold-400/30 bg-gold-500/10 p-10 text-center"
-      >
-        <h3 className="font-display text-xl font-semibold text-navy-950">
-          Message sent
-        </h3>
-        <p className="max-w-sm text-sm leading-relaxed text-navy-800/80">
-          Thank you for contacting us. We&apos;ve received your message and
-          will get back to you as soon as possible.
-        </p>
-      </div>
+    setDeliveryError(
+      "Email delivery is not configured yet. Please contact us using the email address or WhatsApp link provided.",
     );
   }
 
@@ -68,6 +53,12 @@ export function ContactForm() {
           Share a few details and we&apos;ll understand how best to respond.
         </p>
       </div>
+
+      {deliveryError ? (
+        <p role="alert" className="rounded-xl border border-[#F4B942]/45 bg-[#FFF8E1] px-4 py-3 text-sm leading-relaxed text-navy-900">
+          {deliveryError}
+        </p>
+      ) : null}
 
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="flex flex-col gap-2">
